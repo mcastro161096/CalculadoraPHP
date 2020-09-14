@@ -1,4 +1,7 @@
 <?php
+session_start(); 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,7 +24,7 @@
         <form class="calc well center-block" method="POST" action="../Controller/Calculadora.php">
 
           <div>
-            <input id="display" type="text" name="expressao" readonly class="center-block espacamento input-lg" />
+            <input id="display" type="text" name="expressao" value="<?php echo $_SESSION['resultado']; ?>" readonly class="center-block espacamento input-lg" />
 
             <div class="container  center-block ">
               
