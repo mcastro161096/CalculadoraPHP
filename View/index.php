@@ -1,7 +1,11 @@
 <?php
 session_start(); 
 //if($_SESSION['resultado'] == null)
-$_SESSION['resultado'] = "";
+
+if (!isset($_SESSION['resultado'])) 
+{
+  $_SESSION['resultado'] = "";
+} 
 
 ?>
 <!DOCTYPE html>
@@ -72,7 +76,7 @@ $_SESSION['resultado'] = "";
                 <button type="button" class="btn btn-default" onclick="InsereValor(value)" value="0">0</button>
                 <button type="button" class="btn btn-default " onclick="InsereValor(value)" value=".">.</button>
                 <button type="submit" class="btn btn-default"  value="=">=</button>
-                <button type="button" class="btn btn-success" onclick="InsereValor(value)" value="-">
+                <button type="button" class="btn btn-success t" onclick="InsereValor(value)" value="-">
                   <span class="glyphicon glyphicon-minus " aria-hidden="true"></span>
                 </button>
 
