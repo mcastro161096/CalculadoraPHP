@@ -16,10 +16,19 @@ if (value == "x")
     if (campo.value == "") 
     {
         campo.value = value; 
-    }
+    } 
     else
     {
-        campo.value = campo.value + value;
+        if (value == "+" || value == "-" || value == "/" || value == "*") 
+        {
+            var teste = campo.value.substring(campo.value.length -1); 
+            if (teste != "+" && teste != "-" && teste != "/" && teste != "*" ) 
+            {
+                campo.value = campo.value + value;
+            }
+        } 
+        else
+            campo.value = campo.value + value;
     }
 
 }

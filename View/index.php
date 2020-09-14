@@ -1,6 +1,7 @@
 <?php
 session_start(); 
-
+//if($_SESSION['resultado'] == null)
+$_SESSION['resultado'] = "";
 
 ?>
 <!DOCTYPE html>
@@ -69,7 +70,7 @@ session_start();
 
               <div class=" btn-group-lg espacamento cont">
                 <button type="button" class="btn btn-default" onclick="InsereValor(value)" value="0">0</button>
-                <button type="button" class="btn btn-default " onclick="InsereValor(value)" value=",">,</button>
+                <button type="button" class="btn btn-default " onclick="InsereValor(value)" value=".">.</button>
                 <button type="submit" class="btn btn-default"  value="=">=</button>
                 <button type="button" class="btn btn-success" onclick="InsereValor(value)" value="-">
                   <span class="glyphicon glyphicon-minus " aria-hidden="true"></span>

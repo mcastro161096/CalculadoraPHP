@@ -6,13 +6,10 @@ $expressao = $_POST['expressao'];
 
 
 
-$expressao = preg_replace('/\s+/', '', $expressao);
 
-$validaNumeros = '(?:\d+(?:[,.]\d+)?)'; 
-$validaOperadores = '[+\/*\^%-]'; 
-$expressaoRegular = '/^(('.$validaNumeros.'|'.'\s*\((?1)+\)|\((?1)+\))(?:'.$validaOperadores.'(?2))?)+$/'; 
 
-if (preg_match($expressaoRegular, $expressao))
+
+if (eval('$expressaoConvertida = '.$expressao.';'))
 {
     eval('$expressaoConvertida = '.$expressao.';'); 
 $resultado = $expressaoConvertida;
